@@ -1,7 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" systemVersion="17A277" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13196" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13174"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -9,16 +12,67 @@
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Linguis" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <arscnView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" sceneName="CameraSetup.scn" translatesAutoresizingMaskIntoConstraints="NO" id="dcR-fb-fh7">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                            </arscnView>
+                            <visualEffectView hidden="YES" opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gHM-SR-J7f">
+                                <rect key="frame" x="16" y="607" width="343" height="40"/>
+                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="TFu-An-Xbe">
+                                    <rect key="frame" x="0.0" y="0.0" width="343" height="40"/>
+                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Initialize AR Session" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AVK-gP-jv4">
+                                            <rect key="frame" x="95.5" y="9.5" width="152" height="21"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="AVK-gP-jv4" firstAttribute="centerY" secondItem="TFu-An-Xbe" secondAttribute="centerY" id="79M-UJ-HjE"/>
+                                        <constraint firstItem="AVK-gP-jv4" firstAttribute="centerX" secondItem="TFu-An-Xbe" secondAttribute="centerX" id="yFy-3V-G8l"/>
+                                    </constraints>
+                                </view>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="Vqy-hR-5fw"/>
+                                </constraints>
+                                <blurEffect style="light"/>
+                            </visualEffectView>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="人" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="9sO-jU-yps">
+                                <rect key="frame" x="84.5" y="214" width="205" height="239"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="0.40000000000000002" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="200"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="dcR-fb-fh7" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="0iG-iN-EQe"/>
+                            <constraint firstItem="dcR-fb-fh7" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="9Gv-0c-Xea"/>
+                            <constraint firstItem="dcR-fb-fh7" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="CeD-4v-DPc"/>
+                            <constraint firstItem="dcR-fb-fh7" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="Fkg-4W-PEP"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="gHM-SR-J7f" secondAttribute="trailing" constant="16" id="KiD-l6-d4f"/>
+                            <constraint firstItem="gHM-SR-J7f" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="fhp-9V-rxl"/>
+                            <constraint firstItem="9sO-jU-yps" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="hOs-23-gsQ"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="gHM-SR-J7f" secondAttribute="bottom" constant="20" id="mcw-WC-cbt"/>
+                            <constraint firstItem="9sO-jU-yps" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="uD5-aa-rtR"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <connections>
+                        <outlet property="sceneView" destination="dcR-fb-fh7" id="3TC-WL-KEb"/>
+                        <outlet property="sessionInfoLabel" destination="AVK-gP-jv4" id="vZ3-MD-huO"/>
+                        <outlet property="sessionInfoView" destination="gHM-SR-J7f" id="E9W-Hd-sNE"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="117.59999999999999" y="118.29085457271366"/>
         </scene>
     </scenes>
 </document>
