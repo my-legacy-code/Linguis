@@ -78,8 +78,8 @@
 		FEF9D8BE1FA5141300DC236C /* Linguis */ = {
 			isa = PBXGroup;
 			children = (
+				FEF9D8CB1FA5141300DC236C /* Info.plist */,
 				FEF9D8D81FA514E600DC236C /* Helpers */,
-				FEF9D8D71FA514C900DC236C /* Configs */,
 				FEF9D8D61FA514B600DC236C /* Resources */,
 				FEF9D8D51FA5146500DC236C /* Controllers */,
 				FEF9D8D41FA5144400DC236C /* Services */,
@@ -135,14 +135,6 @@
 				FEF9D8C61FA5141300DC236C /* Assets.xcassets */,
 			);
 			path = Resources;
-			sourceTree = "<group>";
-		};
-		FEF9D8D71FA514C900DC236C /* Configs */ = {
-			isa = PBXGroup;
-			children = (
-				FEF9D8CB1FA5141300DC236C /* Info.plist */,
-			);
-			path = Configs;
 			sourceTree = "<group>";
 		};
 		FEF9D8D81FA514E600DC236C /* Helpers */ = {
