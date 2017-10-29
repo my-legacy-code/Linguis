@@ -1,0 +1,35 @@
+# Blender MTL File: 'Pumpkin.blend'
+# Material Count: 3
+
+newmtl Material
+Ns 194.117647
+Ka 0.000000 0.000000 0.000000
+Kd 0.640000 0.640000 0.640000
+Ks 0.139640 0.139640 0.139640
+Ni 1.000000
+d 1.000000
+illum 2
+map_Kd Textures images\Pumpkin.JPG
+map_Disp Textures images\\Pumpkin.JPG
+
+newmtl Material.001
+Ns 194.117647
+Ka 0.000000 0.000000 0.000000
+Kd 0.640000 0.640000 0.640000
+Ks 0.193694 0.193694 0.193694
+Ni 1.000000
+d 1.000000
+illum 2
+map_Kd Textures images\Green area.JPG
+map_Disp Textures images\\Green area.JPG
+
+newmtl Material.002
+Ns 96.078431
+Ka 0.000000 0.000000 0.000000
+Kd 0.202354 0.202354 0.202354
+Ks 0.000000 0.000000 0.000000
+Ni 1.000000
+d 1.000000
+illum 1
+map_Kd Textures images\Paving stone floor texture.jpg
+map_Disp Textures images\\Paving stone floor texture.jpg

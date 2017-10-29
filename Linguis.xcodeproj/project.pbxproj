@@ -18,14 +18,28 @@
 		FE1B2FCA1FA5BFF300C98ADA /* VideoCapture.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE1B2FC91FA5BFF300C98ADA /* VideoCapture.swift */; };
 		FE1B2FCD1FA5C04F00C98ADA /* TinyYOLO.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = FE1B2FCC1FA5C04F00C98ADA /* TinyYOLO.mlmodel */; };
 		FE1B2FCF1FA5C15400C98ADA /* UIImageCVPixelBuffer.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE1B2FCE1FA5C15400C98ADA /* UIImageCVPixelBuffer.swift */; };
-		FE1B2FD11FA5FFA900C98ADA /* CardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE1B2FD01FA5FFA900C98ADA /* CardViewController.swift */; };
+		FE1B2FD11FA5FFA900C98ADA /* ShipViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE1B2FD01FA5FFA900C98ADA /* ShipViewController.swift */; };
+		FE2744BC1FA62AE6003FD4E2 /* GrammarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE2744BB1FA62AE6003FD4E2 /* GrammarViewController.swift */; };
+		FE4EE41D1FA624F2002CFE7A /* Pumpkin.png in Resources */ = {isa = PBXBuildFile; fileRef = FE4EE4181FA624F1002CFE7A /* Pumpkin.png */; };
+		FE4EE41E1FA624F2002CFE7A /* Pumpkin.JPG in Resources */ = {isa = PBXBuildFile; fileRef = FE4EE4191FA624F1002CFE7A /* Pumpkin.JPG */; };
+		FE4EE41F1FA624F2002CFE7A /* Pumpkin.mtl in Resources */ = {isa = PBXBuildFile; fileRef = FE4EE41A1FA624F1002CFE7A /* Pumpkin.mtl */; };
+		FE4EE4201FA624F2002CFE7A /* pumpkin.scn in Resources */ = {isa = PBXBuildFile; fileRef = FE4EE41B1FA624F1002CFE7A /* pumpkin.scn */; };
+		FE4EE4211FA624F2002CFE7A /* Pumpkin.blend in Resources */ = {isa = PBXBuildFile; fileRef = FE4EE41C1FA624F1002CFE7A /* Pumpkin.blend */; };
+		FE4EE4231FA6257C002CFE7A /* texture.png in Resources */ = {isa = PBXBuildFile; fileRef = FE4EE4221FA6257C002CFE7A /* texture.png */; };
+		FE4EE4251FA6264F002CFE7A /* Pumpkin_sound.m4a in Resources */ = {isa = PBXBuildFile; fileRef = FE4EE4241FA6264F002CFE7A /* Pumpkin_sound.m4a */; };
+		FE4EE4271FA6267D002CFE7A /* Green area.JPG in Resources */ = {isa = PBXBuildFile; fileRef = FE4EE4261FA6267D002CFE7A /* Green area.JPG */; };
+		FE4EE4291FA628DA002CFE7A /* DragonViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE4EE4281FA628DA002CFE7A /* DragonViewController.swift */; };
 		FE8B840E1FA52D5E00839EAD /* ARKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FE8B840D1FA52D5500839EAD /* ARKit.framework */; };
-		FE8B84101FA52E0500839EAD /* Assets.scnassets in Resources */ = {isa = PBXBuildFile; fileRef = FE8B840F1FA52E0500839EAD /* Assets.scnassets */; };
 		FEF9D8C01FA5141300DC236C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEF9D8BF1FA5141300DC236C /* AppDelegate.swift */; };
 		FEF9D8C21FA5141300DC236C /* WritingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEF9D8C11FA5141300DC236C /* WritingViewController.swift */; };
 		FEF9D8C51FA5141300DC236C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FEF9D8C31FA5141300DC236C /* Main.storyboard */; };
 		FEF9D8C71FA5141300DC236C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FEF9D8C61FA5141300DC236C /* Assets.xcassets */; };
 		FEF9D8CA1FA5141300DC236C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FEF9D8C81FA5141300DC236C /* LaunchScreen.storyboard */; };
+		FEFB24C91FA61BCB00F31EA7 /* Dragon_sound.m4a in Resources */ = {isa = PBXBuildFile; fileRef = FEFB24C81FA61BCB00F31EA7 /* Dragon_sound.m4a */; };
+		FEFB24D11FA61C4800F31EA7 /* Plane_sound.m4a in Resources */ = {isa = PBXBuildFile; fileRef = FEFB24D01FA61C4800F31EA7 /* Plane_sound.m4a */; };
+		FEFB24D41FA61D4000F31EA7 /* ship.scn in Resources */ = {isa = PBXBuildFile; fileRef = FEFB24D21FA61D4000F31EA7 /* ship.scn */; };
+		FEFB24D51FA61D4000F31EA7 /* dragon.scn in Resources */ = {isa = PBXBuildFile; fileRef = FEFB24D31FA61D4000F31EA7 /* dragon.scn */; };
+		FEFB24D71FA621CA00F31EA7 /* PumpkinViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEFB24D61FA621CA00F31EA7 /* PumpkinViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -42,9 +56,18 @@
 		FE1B2FC91FA5BFF300C98ADA /* VideoCapture.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VideoCapture.swift; sourceTree = "<group>"; };
 		FE1B2FCC1FA5C04F00C98ADA /* TinyYOLO.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = TinyYOLO.mlmodel; sourceTree = "<group>"; };
 		FE1B2FCE1FA5C15400C98ADA /* UIImageCVPixelBuffer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIImageCVPixelBuffer.swift; sourceTree = "<group>"; };
-		FE1B2FD01FA5FFA900C98ADA /* CardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardViewController.swift; sourceTree = "<group>"; };
+		FE1B2FD01FA5FFA900C98ADA /* ShipViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShipViewController.swift; sourceTree = "<group>"; };
+		FE2744BB1FA62AE6003FD4E2 /* GrammarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GrammarViewController.swift; sourceTree = "<group>"; };
+		FE4EE4181FA624F1002CFE7A /* Pumpkin.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Pumpkin.png; sourceTree = "<group>"; };
+		FE4EE4191FA624F1002CFE7A /* Pumpkin.JPG */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Pumpkin.JPG; sourceTree = "<group>"; };
+		FE4EE41A1FA624F1002CFE7A /* Pumpkin.mtl */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Pumpkin.mtl; sourceTree = "<group>"; };
+		FE4EE41B1FA624F1002CFE7A /* pumpkin.scn */ = {isa = PBXFileReference; lastKnownFileType = file.bplist; path = pumpkin.scn; sourceTree = "<group>"; };
+		FE4EE41C1FA624F1002CFE7A /* Pumpkin.blend */ = {isa = PBXFileReference; lastKnownFileType = file; path = Pumpkin.blend; sourceTree = "<group>"; };
+		FE4EE4221FA6257C002CFE7A /* texture.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = texture.png; sourceTree = "<group>"; };
+		FE4EE4241FA6264F002CFE7A /* Pumpkin_sound.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = Pumpkin_sound.m4a; sourceTree = "<group>"; };
+		FE4EE4261FA6267D002CFE7A /* Green area.JPG */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "Green area.JPG"; sourceTree = "<group>"; };
+		FE4EE4281FA628DA002CFE7A /* DragonViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DragonViewController.swift; sourceTree = "<group>"; };
 		FE8B840D1FA52D5500839EAD /* ARKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ARKit.framework; path = System/Library/Frameworks/ARKit.framework; sourceTree = SDKROOT; };
-		FE8B840F1FA52E0500839EAD /* Assets.scnassets */ = {isa = PBXFileReference; lastKnownFileType = wrapper.scnassets; path = Assets.scnassets; sourceTree = "<group>"; };
 		FEF9D8BC1FA5141300DC236C /* Linguis.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Linguis.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FEF9D8BF1FA5141300DC236C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FEF9D8C11FA5141300DC236C /* WritingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WritingViewController.swift; sourceTree = "<group>"; };
@@ -52,6 +75,11 @@
 		FEF9D8C61FA5141300DC236C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		FEF9D8C91FA5141300DC236C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		FEF9D8CB1FA5141300DC236C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FEFB24C81FA61BCB00F31EA7 /* Dragon_sound.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = Dragon_sound.m4a; sourceTree = "<group>"; };
+		FEFB24D01FA61C4800F31EA7 /* Plane_sound.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = Plane_sound.m4a; sourceTree = "<group>"; };
+		FEFB24D21FA61D4000F31EA7 /* ship.scn */ = {isa = PBXFileReference; lastKnownFileType = file.bplist; path = ship.scn; sourceTree = "<group>"; };
+		FEFB24D31FA61D4000F31EA7 /* dragon.scn */ = {isa = PBXFileReference; lastKnownFileType = file.bplist; path = dragon.scn; sourceTree = "<group>"; };
+		FEFB24D61FA621CA00F31EA7 /* PumpkinViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PumpkinViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -93,6 +121,7 @@
 			isa = PBXGroup;
 			children = (
 				FE1B2FCC1FA5C04F00C98ADA /* TinyYOLO.mlmodel */,
+				FEF9D8C61FA5141300DC236C /* Assets.xcassets */,
 			);
 			path = mlmodels;
 			sourceTree = "<group>";
@@ -169,7 +198,10 @@
 			children = (
 				FEF9D8C11FA5141300DC236C /* WritingViewController.swift */,
 				FE1B2FBA1FA5A60C00C98ADA /* ScanViewController.swift */,
-				FE1B2FD01FA5FFA900C98ADA /* CardViewController.swift */,
+				FE1B2FD01FA5FFA900C98ADA /* ShipViewController.swift */,
+				FEFB24D61FA621CA00F31EA7 /* PumpkinViewController.swift */,
+				FE4EE4281FA628DA002CFE7A /* DragonViewController.swift */,
+				FE2744BB1FA62AE6003FD4E2 /* GrammarViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -177,12 +209,23 @@
 		FEF9D8D61FA514B600DC236C /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				FEFB24C81FA61BCB00F31EA7 /* Dragon_sound.m4a */,
+				FEFB24D01FA61C4800F31EA7 /* Plane_sound.m4a */,
+				FE4EE4241FA6264F002CFE7A /* Pumpkin_sound.m4a */,
+				FEFB24D21FA61D4000F31EA7 /* ship.scn */,
+				FEFB24D31FA61D4000F31EA7 /* dragon.scn */,
+				FE4EE41C1FA624F1002CFE7A /* Pumpkin.blend */,
+				FE4EE4261FA6267D002CFE7A /* Green area.JPG */,
+				FE4EE4191FA624F1002CFE7A /* Pumpkin.JPG */,
+				FE4EE41A1FA624F1002CFE7A /* Pumpkin.mtl */,
+				FE4EE4181FA624F1002CFE7A /* Pumpkin.png */,
+				FE4EE41B1FA624F1002CFE7A /* pumpkin.scn */,
+				FE4EE4221FA6257C002CFE7A /* texture.png */,
 				FE1B2FCB1FA5C03600C98ADA /* mlmodels */,
-				FE8B840F1FA52E0500839EAD /* Assets.scnassets */,
-				FEF9D8C61FA5141300DC236C /* Assets.xcassets */,
 			);
-			path = Resources;
-			sourceTree = "<group>";
+			name = Resources;
+			path = Linguis/Resources;
+			sourceTree = SOURCE_ROOT;
 		};
 		FEF9D8D81FA514E600DC236C /* Helpers */ = {
 			isa = PBXGroup;
@@ -256,9 +299,20 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FE8B84101FA52E0500839EAD /* Assets.scnassets in Resources */,
+				FE4EE4231FA6257C002CFE7A /* texture.png in Resources */,
+				FE4EE4251FA6264F002CFE7A /* Pumpkin_sound.m4a in Resources */,
+				FE4EE4201FA624F2002CFE7A /* pumpkin.scn in Resources */,
 				FEF9D8CA1FA5141300DC236C /* LaunchScreen.storyboard in Resources */,
+				FE4EE41E1FA624F2002CFE7A /* Pumpkin.JPG in Resources */,
+				FEFB24D51FA61D4000F31EA7 /* dragon.scn in Resources */,
+				FE4EE4271FA6267D002CFE7A /* Green area.JPG in Resources */,
+				FEFB24D11FA61C4800F31EA7 /* Plane_sound.m4a in Resources */,
+				FE4EE41F1FA624F2002CFE7A /* Pumpkin.mtl in Resources */,
+				FEFB24C91FA61BCB00F31EA7 /* Dragon_sound.m4a in Resources */,
+				FE4EE4211FA624F2002CFE7A /* Pumpkin.blend in Resources */,
 				FEF9D8C71FA5141300DC236C /* Assets.xcassets in Resources */,
+				FEFB24D41FA61D4000F31EA7 /* ship.scn in Resources */,
+				FE4EE41D1FA624F2002CFE7A /* Pumpkin.png in Resources */,
 				FEF9D8C51FA5141300DC236C /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -320,13 +374,16 @@
 			files = (
 				FE1B2FCA1FA5BFF300C98ADA /* VideoCapture.swift in Sources */,
 				FEF9D8C21FA5141300DC236C /* WritingViewController.swift in Sources */,
-				FE1B2FD11FA5FFA900C98ADA /* CardViewController.swift in Sources */,
+				FE1B2FD11FA5FFA900C98ADA /* ShipViewController.swift in Sources */,
 				FE1B2FC61FA5BEEA00C98ADA /* Helpers.swift in Sources */,
 				FE1B2FC41FA5BEC100C98ADA /* CVPixelBufferHelpers.swift in Sources */,
 				FE1B2FBB1FA5A60C00C98ADA /* ScanViewController.swift in Sources */,
 				FEF9D8C01FA5141300DC236C /* AppDelegate.swift in Sources */,
 				FE1B2FCD1FA5C04F00C98ADA /* TinyYOLO.mlmodel in Sources */,
+				FE4EE4291FA628DA002CFE7A /* DragonViewController.swift in Sources */,
 				FE1B2FCF1FA5C15400C98ADA /* UIImageCVPixelBuffer.swift in Sources */,
+				FE2744BC1FA62AE6003FD4E2 /* GrammarViewController.swift in Sources */,
+				FEFB24D71FA621CA00F31EA7 /* PumpkinViewController.swift in Sources */,
 				FE1B2FC81FA5BF1200C98ADA /* YOLO.swift in Sources */,
 				FE1B2FC21FA5BEAB00C98ADA /* BoundingBox.swift in Sources */,
 			);
@@ -466,7 +523,6 @@
 			baseConfigurationReference = 24FFA998118A872CC60E55E5 /* Pods-Linguis.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = NG4G76E9WF;
 				INFOPLIST_FILE = Linguis/Info.plist;
@@ -483,7 +539,6 @@
 			baseConfigurationReference = CDD9A980083B596E57496D8D /* Pods-Linguis.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = NG4G76E9WF;
 				INFOPLIST_FILE = Linguis/Info.plist;
