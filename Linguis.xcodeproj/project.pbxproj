@@ -18,6 +18,7 @@
 		FE1B2FCA1FA5BFF300C98ADA /* VideoCapture.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE1B2FC91FA5BFF300C98ADA /* VideoCapture.swift */; };
 		FE1B2FCD1FA5C04F00C98ADA /* TinyYOLO.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = FE1B2FCC1FA5C04F00C98ADA /* TinyYOLO.mlmodel */; };
 		FE1B2FCF1FA5C15400C98ADA /* UIImageCVPixelBuffer.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE1B2FCE1FA5C15400C98ADA /* UIImageCVPixelBuffer.swift */; };
+		FE1B2FD11FA5FFA900C98ADA /* CardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE1B2FD01FA5FFA900C98ADA /* CardViewController.swift */; };
 		FE8B840E1FA52D5E00839EAD /* ARKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FE8B840D1FA52D5500839EAD /* ARKit.framework */; };
 		FE8B84101FA52E0500839EAD /* Assets.scnassets in Resources */ = {isa = PBXBuildFile; fileRef = FE8B840F1FA52E0500839EAD /* Assets.scnassets */; };
 		FEF9D8C01FA5141300DC236C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEF9D8BF1FA5141300DC236C /* AppDelegate.swift */; };
@@ -41,6 +42,7 @@
 		FE1B2FC91FA5BFF300C98ADA /* VideoCapture.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VideoCapture.swift; sourceTree = "<group>"; };
 		FE1B2FCC1FA5C04F00C98ADA /* TinyYOLO.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = TinyYOLO.mlmodel; sourceTree = "<group>"; };
 		FE1B2FCE1FA5C15400C98ADA /* UIImageCVPixelBuffer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIImageCVPixelBuffer.swift; sourceTree = "<group>"; };
+		FE1B2FD01FA5FFA900C98ADA /* CardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardViewController.swift; sourceTree = "<group>"; };
 		FE8B840D1FA52D5500839EAD /* ARKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ARKit.framework; path = System/Library/Frameworks/ARKit.framework; sourceTree = SDKROOT; };
 		FE8B840F1FA52E0500839EAD /* Assets.scnassets */ = {isa = PBXFileReference; lastKnownFileType = wrapper.scnassets; path = Assets.scnassets; sourceTree = "<group>"; };
 		FEF9D8BC1FA5141300DC236C /* Linguis.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Linguis.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -167,6 +169,7 @@
 			children = (
 				FEF9D8C11FA5141300DC236C /* WritingViewController.swift */,
 				FE1B2FBA1FA5A60C00C98ADA /* ScanViewController.swift */,
+				FE1B2FD01FA5FFA900C98ADA /* CardViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -317,6 +320,7 @@
 			files = (
 				FE1B2FCA1FA5BFF300C98ADA /* VideoCapture.swift in Sources */,
 				FEF9D8C21FA5141300DC236C /* WritingViewController.swift in Sources */,
+				FE1B2FD11FA5FFA900C98ADA /* CardViewController.swift in Sources */,
 				FE1B2FC61FA5BEEA00C98ADA /* Helpers.swift in Sources */,
 				FE1B2FC41FA5BEC100C98ADA /* CVPixelBufferHelpers.swift in Sources */,
 				FE1B2FBB1FA5A60C00C98ADA /* ScanViewController.swift in Sources */,

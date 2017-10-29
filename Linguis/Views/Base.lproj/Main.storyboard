@@ -29,21 +29,79 @@
             </objects>
             <point key="canvasLocation" x="-1649" y="9"/>
         </scene>
-        <!--Holo-->
+        <!--Card-->
         <scene sceneID="W4X-Gz-Ob0">
             <objects>
-                <viewController id="IpE-rh-oMf" sceneMemberID="viewController">
+                <viewController id="IpE-rh-oMf" customClass="CardViewController" customModule="Linguis" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="K0Y-PP-DPN">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="VVw-dI-I1l">
+                                <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="IcK-P3-cnE"/>
+                                </constraints>
+                                <items/>
+                            </toolbar>
+                            <arscnView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" sceneName="ship.scn" jitteringEnabled="YES" wantsMultisampling="YES" autoenablesDefaultLighting="YES" translatesAutoresizingMaskIntoConstraints="NO" id="fb1-Xg-A5m">
+                                <rect key="frame" x="0.0" y="64" width="375" height="554"/>
+                            </arscnView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XJt-YA-sjV">
+                                <rect key="frame" x="280" y="323" width="95" height="36"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                                <state key="normal" title="=&gt;">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="next:" destination="IpE-rh-oMf" eventType="touchUpInside" id="xyJ-Pa-3Ce"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Airplane" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="v4O-et-6Ei">
+                                <rect key="frame" x="156" y="556" width="63" height="32"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="32" id="BiX-RA-lG7"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="飞  机" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8DT-q7-hb6">
+                                <rect key="frame" x="146" y="482" width="83.5" height="68"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="68" id="jz1-aq-X4P"/>
+                                    <constraint firstAttribute="width" constant="83.5" id="mrf-33-fCY"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="34"/>
+                                <color key="textColor" red="0.98731042710000005" green="0.99867625839999996" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="cS7-VS-gYG" firstAttribute="bottom" secondItem="v4O-et-6Ei" secondAttribute="bottom" constant="30" id="24f-WL-Wv8"/>
+                            <constraint firstItem="v4O-et-6Ei" firstAttribute="top" secondItem="8DT-q7-hb6" secondAttribute="bottom" constant="6" id="FgD-IU-loH"/>
+                            <constraint firstItem="VVw-dI-I1l" firstAttribute="trailing" secondItem="cS7-VS-gYG" secondAttribute="trailing" id="LKy-kC-JIX"/>
+                            <constraint firstItem="VVw-dI-I1l" firstAttribute="leading" secondItem="cS7-VS-gYG" secondAttribute="leading" id="SpP-7F-69q"/>
+                            <constraint firstItem="fb1-Xg-A5m" firstAttribute="leading" secondItem="cS7-VS-gYG" secondAttribute="leading" id="Yfj-qB-G9f"/>
+                            <constraint firstItem="fb1-Xg-A5m" firstAttribute="top" secondItem="VVw-dI-I1l" secondAttribute="bottom" id="aeU-fK-FRw"/>
+                            <constraint firstItem="fb1-Xg-A5m" firstAttribute="trailing" secondItem="cS7-VS-gYG" secondAttribute="trailing" id="rDl-2n-HHB"/>
+                            <constraint firstItem="fb1-Xg-A5m" firstAttribute="bottom" secondItem="cS7-VS-gYG" secondAttribute="bottom" id="rjD-hg-39y"/>
+                            <constraint firstItem="v4O-et-6Ei" firstAttribute="centerX" secondItem="K0Y-PP-DPN" secondAttribute="centerX" id="sOb-gm-tFs"/>
+                            <constraint firstItem="VVw-dI-I1l" firstAttribute="top" secondItem="cS7-VS-gYG" secondAttribute="top" id="uWi-BR-W2I"/>
+                            <constraint firstItem="8DT-q7-hb6" firstAttribute="centerX" secondItem="K0Y-PP-DPN" secondAttribute="centerX" id="vmb-6A-Hbu"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="cS7-VS-gYG"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Holo" image="3d-glasses" selectedImage="3d-glasses-filled" id="8hu-Oq-Njm"/>
+                    <tabBarItem key="tabBarItem" title="Card" image="3d-glasses" selectedImage="3d-glasses-filled" id="8hu-Oq-Njm"/>
+                    <connections>
+                        <outlet property="sceneView" destination="fb1-Xg-A5m" id="QcX-n9-OSb"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iv8-Es-hxk" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-841" y="-718"/>
+            <point key="canvasLocation" x="-842.39999999999998" y="-718.29085457271367"/>
         </scene>
         <!--Writing-->
         <scene sceneID="tne-QT-ifu">
@@ -130,8 +188,8 @@
                                 <rect key="frame" x="0.0" y="64" width="375" height="554"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             </view>
-                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Fg7-rv-8ee">
-                                <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Fg7-rv-8ee">
+                                <rect key="frame" x="0.0" y="19" width="375" height="44"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="44" id="YzW-ol-7Fr"/>
                                 </constraints>
