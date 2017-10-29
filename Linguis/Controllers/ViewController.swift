@@ -16,13 +16,43 @@ class ViewController: UIViewController, ARSessionDelegate {
     @IBOutlet weak var sessionInfoView: UIVisualEffectView!
     @IBOutlet weak var sceneView: ARSCNView!
     @IBOutlet weak var wordText: UITextField!
+    @IBOutlet weak var resetButton: UIButton!
+    @IBAction func resetToOriginalState (sender: UIButton) {
+        textLabel1.frame.origin.x = oldLabelPosition1
+        textLabel1.textColor = UIColor.white
+        textLabel1.layer.shadowColor = UIColor.black.cgColor
+        textLabel1.layer.shadowOpacity = 1
+        textLabel1.layer.shadowOffset = CGSize.zero
+        textLabel1.layer.shadowRadius = 10
+        
+        textLabel2.frame.origin.x = oldLabelPosition2
+        textLabel2.textColor = UIColor.white
+        textLabel2.layer.shadowColor = UIColor.black.cgColor
+        textLabel2.layer.shadowOpacity = 1
+        textLabel2.layer.shadowOffset = CGSize.zero
+        textLabel2.layer.shadowRadius = 10
+        
+        textLabel3.frame.origin.x = oldLabelPosition3
+        textLabel3.textColor = UIColor.white
+        textLabel3.layer.shadowColor = UIColor.black.cgColor
+        textLabel3.layer.shadowOpacity = 1
+        textLabel3.layer.shadowOffset = CGSize.zero
+        textLabel3.layer.shadowRadius = 10
+    }
     @IBOutlet weak var textLabel1: UILabel!
     @IBOutlet weak var textLabel2: UILabel!
     @IBOutlet weak var textLabel3: UILabel!
     var locLabel = -1
+    var labelPosition1 = CGFloat(0)
+    var labelPosition2 = CGFloat(0)
+    var labelPosition3 = CGFloat(0)
+    var oldLabelPosition1 = CGFloat(0)
+    var oldLabelPosition2 = CGFloat(0)
+    var oldLabelPosition3 = CGFloat(0)
     
     override func viewDidLoad() {
         super.viewDidLoad()
+
         // Do any additional setup after loading the view, typically from a nib.
         
         // Configure ARKit
@@ -33,6 +63,10 @@ class ViewController: UIViewController, ARSessionDelegate {
         sceneView.session.run(configuration)
         
         UIApplication.shared.isIdleTimerDisabled = true
+        
+        oldLabelPosition1 = textLabel1.frame.origin.x
+        oldLabelPosition2 = textLabel2.frame.origin.x
+        oldLabelPosition3 = textLabel3.frame.origin.x
         
         let gesture = UIPanGestureRecognizer(target: self, action: #selector(userDragged))
         
@@ -89,6 +123,21 @@ class ViewController: UIViewController, ARSessionDelegate {
         var loc = gesture.location(in: self.view)
         loc.y = gesture.view!.center.y
         gesture.view!.center = loc
+        
+        labelPosition1 = textLabel1.frame.origin.x
+        labelPosition2 = textLabel2.frame.origin.x
+        labelPosition3 = textLabel3.frame.origin.x
+//        print(labelPosition1)
+        correctLabelPosition()
+        
+    }
+    
+    @objc func correctLabelPosition() {
+        if (labelPosition1 < labelPosition2 && labelPosition2 < labelPosition3) {
+            textLabel1.textColor = UIColor.green
+            textLabel2.textColor = UIColor.green
+            textLabel3.textColor = UIColor.green
+        }
     }
 
 }
