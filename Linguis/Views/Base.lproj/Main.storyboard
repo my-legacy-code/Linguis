@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13196" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13196" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="fQu-GA-6ak">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -9,24 +9,80 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Tab Bar Controller-->
+        <scene sceneID="t7x-5R-l8F">
+            <objects>
+                <tabBarController id="fQu-GA-6ak" sceneMemberID="viewController">
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="ruC-SP-P4h">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="IpE-rh-oMf" kind="relationship" relationship="viewControllers" id="I4Z-HX-bWT"/>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="viewControllers" id="fza-yd-M47"/>
+                        <segue destination="ZsN-CE-s3l" kind="relationship" relationship="viewControllers" id="qsx-ai-uMq"/>
+                        <segue destination="5d7-T7-VUS" kind="relationship" relationship="viewControllers" id="z9g-Fw-Xf1"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="E8A-Gx-ZdV" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1649" y="9"/>
+        </scene>
+        <!--Holo-->
+        <scene sceneID="W4X-Gz-Ob0">
+            <objects>
+                <viewController id="IpE-rh-oMf" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="K0Y-PP-DPN">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <viewLayoutGuide key="safeArea" id="cS7-VS-gYG"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Holo" image="3d-glasses" selectedImage="3d-glasses-filled" id="8hu-Oq-Njm"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="iv8-Es-hxk" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-841" y="-718"/>
+        </scene>
+        <!--Writing-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Linguis" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="WritingViewController" customModule="Linguis" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xuv-lr-9jc">
+                                <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="ma0-v9-YV2"/>
+                                </constraints>
+                                <items>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="imv-Cj-ATE"/>
+                                    <barButtonItem systemItem="add" id="4Hc-W2-u9o">
+                                        <connections>
+                                            <action selector="writeNewWord:" destination="BYZ-38-t0r" id="zt0-nu-SBb"/>
+                                        </connections>
+                                    </barButtonItem>
+                                </items>
+                            </toolbar>
                             <arscnView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" sceneName="CameraSetup.scn" translatesAutoresizingMaskIntoConstraints="NO" id="dcR-fb-fh7">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <rect key="frame" x="0.0" y="64" width="375" height="554"/>
                             </arscnView>
-                            <visualEffectView hidden="YES" opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gHM-SR-J7f">
-                                <rect key="frame" x="16" y="607" width="343" height="40"/>
-                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="TFu-An-Xbe">
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="center" adjustsFontSizeToFit="NO" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="9sO-jU-yps">
+                                <rect key="frame" x="165" y="214" width="45" height="239"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="0.40000000000000002" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="200"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <visualEffectView hidden="YES" opaque="NO" contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="gHM-SR-J7f">
+                                <rect key="frame" x="16" y="558" width="343" height="40"/>
+                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" ambiguous="YES" insetsLayoutMarginsFromSafeArea="NO" id="TFu-An-Xbe">
                                     <rect key="frame" x="0.0" y="0.0" width="343" height="40"/>
                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                     <subviews>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Initialize AR Session" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AVK-gP-jv4">
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Initialize AR Session" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AVK-gP-jv4">
                                             <rect key="frame" x="95.5" y="9.5" width="152" height="21"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <nil key="textColor"/>
@@ -43,36 +99,75 @@
                                 </constraints>
                                 <blurEffect style="light"/>
                             </visualEffectView>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="人" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="9sO-jU-yps">
-                                <rect key="frame" x="84.5" y="214" width="205" height="239"/>
-                                <color key="textColor" red="1" green="1" blue="1" alpha="0.40000000000000002" colorSpace="calibratedRGB"/>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="200"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="dcR-fb-fh7" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="0iG-iN-EQe"/>
-                            <constraint firstItem="dcR-fb-fh7" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="9Gv-0c-Xea"/>
-                            <constraint firstItem="dcR-fb-fh7" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="CeD-4v-DPc"/>
-                            <constraint firstItem="dcR-fb-fh7" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="Fkg-4W-PEP"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="gHM-SR-J7f" secondAttribute="trailing" constant="16" id="KiD-l6-d4f"/>
+                            <constraint firstItem="dcR-fb-fh7" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="4hC-6X-z57"/>
+                            <constraint firstItem="xuv-lr-9jc" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="7l8-do-ptx"/>
+                            <constraint firstItem="dcR-fb-fh7" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="AXM-kt-nfw"/>
+                            <constraint firstItem="9sO-jU-yps" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="CVj-CL-vVj"/>
+                            <constraint firstItem="dcR-fb-fh7" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="TfO-0g-czc"/>
+                            <constraint firstItem="xuv-lr-9jc" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="Wyt-Zb-DXW"/>
+                            <constraint firstItem="xuv-lr-9jc" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="XxP-Aa-VxY"/>
                             <constraint firstItem="gHM-SR-J7f" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="fhp-9V-rxl"/>
-                            <constraint firstItem="9sO-jU-yps" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="hOs-23-gsQ"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="gHM-SR-J7f" secondAttribute="bottom" constant="20" id="mcw-WC-cbt"/>
-                            <constraint firstItem="9sO-jU-yps" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="uD5-aa-rtR"/>
+                            <constraint firstItem="dcR-fb-fh7" firstAttribute="top" secondItem="xuv-lr-9jc" secondAttribute="bottom" id="ftS-wy-rJS"/>
+                            <constraint firstItem="9sO-jU-yps" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="rhj-bQ-qIt"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <tabBarItem key="tabBarItem" title="Writing" image="writing" selectedImage="writing-filled" id="J3Y-3t-AeI"/>
                     <connections>
                         <outlet property="sceneView" destination="dcR-fb-fh7" id="3TC-WL-KEb"/>
                         <outlet property="sessionInfoLabel" destination="AVK-gP-jv4" id="vZ3-MD-huO"/>
                         <outlet property="sessionInfoView" destination="gHM-SR-J7f" id="E9W-Hd-sNE"/>
+                        <outlet property="wordLabel" destination="9sO-jU-yps" id="Zg8-ng-iNk"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="117.59999999999999" y="118.29085457271366"/>
+            <point key="canvasLocation" x="-834.39999999999998" y="8.5457271364317844"/>
+        </scene>
+        <!--Grammar-->
+        <scene sceneID="AKN-eA-PtT">
+            <objects>
+                <viewController id="ZsN-CE-s3l" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="smN-vB-wIH">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <viewLayoutGuide key="safeArea" id="hFK-SD-eHn"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Grammar" image="donate" selectedImage="donate-filled" id="OA6-5w-URf"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="wNg-Qx-di6" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-834" y="722"/>
+        </scene>
+        <!--Track-->
+        <scene sceneID="gTd-Q4-lXX">
+            <objects>
+                <viewController id="5d7-T7-VUS" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="ndN-bg-nlC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <viewLayoutGuide key="safeArea" id="Knr-B4-UGm"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Track" image="scan" selectedImage="scan-filled" id="YjJ-KT-leO"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="aPl-3b-Bu3" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-836" y="1398"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="3d-glasses" width="30" height="30"/>
+        <image name="3d-glasses-filled" width="30" height="30"/>
+        <image name="donate" width="30" height="30"/>
+        <image name="donate-filled" width="30" height="30"/>
+        <image name="scan" width="30" height="30"/>
+        <image name="scan-filled" width="30" height="30"/>
+        <image name="writing" width="30" height="30"/>
+        <image name="writing-filled" width="25" height="25"/>
+    </resources>
 </document>

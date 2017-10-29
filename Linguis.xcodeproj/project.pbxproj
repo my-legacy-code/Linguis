@@ -11,7 +11,7 @@
 		FE8B840E1FA52D5E00839EAD /* ARKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FE8B840D1FA52D5500839EAD /* ARKit.framework */; };
 		FE8B84101FA52E0500839EAD /* Assets.scnassets in Resources */ = {isa = PBXBuildFile; fileRef = FE8B840F1FA52E0500839EAD /* Assets.scnassets */; };
 		FEF9D8C01FA5141300DC236C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEF9D8BF1FA5141300DC236C /* AppDelegate.swift */; };
-		FEF9D8C21FA5141300DC236C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEF9D8C11FA5141300DC236C /* ViewController.swift */; };
+		FEF9D8C21FA5141300DC236C /* WritingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEF9D8C11FA5141300DC236C /* WritingViewController.swift */; };
 		FEF9D8C51FA5141300DC236C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FEF9D8C31FA5141300DC236C /* Main.storyboard */; };
 		FEF9D8C71FA5141300DC236C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FEF9D8C61FA5141300DC236C /* Assets.xcassets */; };
 		FEF9D8CA1FA5141300DC236C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FEF9D8C81FA5141300DC236C /* LaunchScreen.storyboard */; };
@@ -25,7 +25,7 @@
 		FE8B840F1FA52E0500839EAD /* Assets.scnassets */ = {isa = PBXFileReference; lastKnownFileType = wrapper.scnassets; path = Assets.scnassets; sourceTree = "<group>"; };
 		FEF9D8BC1FA5141300DC236C /* Linguis.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Linguis.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FEF9D8BF1FA5141300DC236C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		FEF9D8C11FA5141300DC236C /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		FEF9D8C11FA5141300DC236C /* WritingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WritingViewController.swift; sourceTree = "<group>"; };
 		FEF9D8C41FA5141300DC236C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		FEF9D8C61FA5141300DC236C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		FEF9D8C91FA5141300DC236C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -130,7 +130,7 @@
 		FEF9D8D51FA5146500DC236C /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				FEF9D8C11FA5141300DC236C /* ViewController.swift */,
+				FEF9D8C11FA5141300DC236C /* WritingViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -275,7 +275,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FEF9D8C21FA5141300DC236C /* ViewController.swift in Sources */,
+				FEF9D8C21FA5141300DC236C /* WritingViewController.swift in Sources */,
 				FEF9D8C01FA5141300DC236C /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -414,6 +414,7 @@
 			baseConfigurationReference = 24FFA998118A872CC60E55E5 /* Pods-Linguis.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = NG4G76E9WF;
 				INFOPLIST_FILE = Linguis/Info.plist;
@@ -430,6 +431,7 @@
 			baseConfigurationReference = CDD9A980083B596E57496D8D /* Pods-Linguis.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = NG4G76E9WF;
 				INFOPLIST_FILE = Linguis/Info.plist;

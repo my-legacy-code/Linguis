@@ -10,11 +10,15 @@ import UIKit
 import ARKit
 import SceneKit
 
-class ViewController: UIViewController, ARSessionDelegate {
+class WritingViewController: UIViewController, ARSessionDelegate {
     
     @IBOutlet weak var sessionInfoLabel: UILabel!
     @IBOutlet weak var sessionInfoView: UIVisualEffectView!
     @IBOutlet weak var sceneView: ARSCNView!
+    @IBOutlet weak var wordLabel: UITextField!
+    
+    var alertController: UIAlertController!
+    var words: [String: String]!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -28,6 +32,25 @@ class ViewController: UIViewController, ARSessionDelegate {
         sceneView.session.run(configuration)
         
         UIApplication.shared.isIdleTimerDisabled = true
+        
+        // Setup actionsheet
+        words = [
+            "human": "人",
+            "cool": "酷",
+            "ha": "哈",
+            "hey": "嘿"
+        ]
+        alertController = UIAlertController(title: "What do you want to write?", message: nil, preferredStyle: .actionSheet)
+        
+        for word in words.keys {
+            alertController.addAction(UIAlertAction(title: word, style: .default, handler: { [weak alertController] (_) in
+                self.wordLabel.text = self.words[word]
+            }))
+        }
+    }
+    
+    @IBAction func writeNewWord(_ sender: Any) {
+        self.present(alertController, animated: true, completion: nil)
     }
     
     override func viewWillDisappear(_ animated: Bool) {
