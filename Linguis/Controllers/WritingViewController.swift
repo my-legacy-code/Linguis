@@ -12,10 +12,19 @@ import SceneKit
 
 class WritingViewController: UIViewController, ARSessionDelegate {
     
-    @IBOutlet weak var sessionInfoLabel: UILabel!
-    @IBOutlet weak var sessionInfoView: UIVisualEffectView!
-    @IBOutlet weak var sceneView: ARSCNView!
     @IBOutlet weak var wordLabel: UITextField!
+    @IBOutlet weak var cameraView: UIView!
+    private lazy var cameraLayer: AVCaptureVideoPreviewLayer = AVCaptureVideoPreviewLayer(session: self.captureSession)
+    private lazy var captureSession: AVCaptureSession = {
+        let session = AVCaptureSession()
+        session.sessionPreset = AVCaptureSession.Preset.photo
+        guard
+            let backCamera = AVCaptureDevice.default(.builtInWideAngleCamera, for: .video, position: .back),
+            let input = try? AVCaptureDeviceInput(device: backCamera)
+            else { return session }
+        session.addInput(input)
+        return session
+    }()
     
     var alertController: UIAlertController!
     var words: [String: String]!
@@ -24,14 +33,10 @@ class WritingViewController: UIViewController, ARSessionDelegate {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         
-        // Configure ARKit
-        let configuration = ARWorldTrackingConfiguration()
-        configuration.planeDetection = .horizontal
+        self.cameraLayer.videoGravity = AVLayerVideoGravity.resizeAspectFill
         
-        sceneView.session.delegate = self
-        sceneView.session.run(configuration)
-        
-        UIApplication.shared.isIdleTimerDisabled = true
+        // make the camera appear on the screen
+        self.cameraView?.layer.addSublayer(self.cameraLayer)
         
         // Setup actionsheet
         words = [
@@ -49,40 +54,23 @@ class WritingViewController: UIViewController, ARSessionDelegate {
         }
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+         self.captureSession.startRunning()
+    }
+    
+    override func viewDidDisappear(_ animated: Bool) {
+        self.captureSession.stopRunning()
+    }
+    
     @IBAction func writeNewWord(_ sender: Any) {
         self.present(alertController, animated: true, completion: nil)
     }
     
-    override func viewWillDisappear(_ animated: Bool) {
-        sceneView.session.pause()
-    }
-    
-    func session(_ session: ARSession, cameraDidChangeTrackingState camera: ARCamera) {
-        updateSessionInfo(trackingState: camera.trackingState)
-    }
-    
-    private func updateSessionInfo(trackingState: ARCamera.TrackingState) {
-        let message: String
+    override func viewDidLayoutSubviews() {
+        super.viewDidLayoutSubviews()
         
-        switch trackingState {
-        case .normal:
-            message = ""
-            
-        case .notAvailable:
-            message = "Tracking unavailable."
-            
-        case .limited(.excessiveMotion):
-            message = "Tracking limited - Move the device more slowly."
-            
-        case .limited(.insufficientFeatures):
-            message = "Tracking limited - Point the device at an area with visible surface detail, or improve lighting conditions."
-            
-        case .limited(.initializing):
-            message = "Initializing AR session."
-        }
-        
-        sessionInfoLabel.text = message
-//        sessionInfoView.isHidden = message.isEmpty
+        // make sure the layer is the correct size
+        self.cameraLayer.frame = self.cameraView?.bounds ?? .zero
     }
 
     override func didReceiveMemoryWarning() {
