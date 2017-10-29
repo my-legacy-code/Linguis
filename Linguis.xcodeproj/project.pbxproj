@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		6F45B9E9E88ECD36286B9513 /* Pods_Linguis.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 934FCD7556AE6A378953B867 /* Pods_Linguis.framework */; };
+		FE1B2FBB1FA5A60C00C98ADA /* TrackViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE1B2FBA1FA5A60C00C98ADA /* TrackViewController.swift */; };
+		FE1B2FBD1FA5A86700C98ADA /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FE1B2FBC1FA5A86100C98ADA /* AVFoundation.framework */; };
+		FE1B2FBF1FA5A87800C98ADA /* Vision.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FE1B2FBE1FA5A87000C98ADA /* Vision.framework */; };
 		FE8B840E1FA52D5E00839EAD /* ARKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FE8B840D1FA52D5500839EAD /* ARKit.framework */; };
 		FE8B84101FA52E0500839EAD /* Assets.scnassets in Resources */ = {isa = PBXBuildFile; fileRef = FE8B840F1FA52E0500839EAD /* Assets.scnassets */; };
 		FEF9D8C01FA5141300DC236C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEF9D8BF1FA5141300DC236C /* AppDelegate.swift */; };
@@ -21,6 +24,9 @@
 		24FFA998118A872CC60E55E5 /* Pods-Linguis.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Linguis.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Linguis/Pods-Linguis.debug.xcconfig"; sourceTree = "<group>"; };
 		934FCD7556AE6A378953B867 /* Pods_Linguis.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Linguis.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		CDD9A980083B596E57496D8D /* Pods-Linguis.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Linguis.release.xcconfig"; path = "Pods/Target Support Files/Pods-Linguis/Pods-Linguis.release.xcconfig"; sourceTree = "<group>"; };
+		FE1B2FBA1FA5A60C00C98ADA /* TrackViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrackViewController.swift; sourceTree = "<group>"; };
+		FE1B2FBC1FA5A86100C98ADA /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		FE1B2FBE1FA5A87000C98ADA /* Vision.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Vision.framework; path = System/Library/Frameworks/Vision.framework; sourceTree = SDKROOT; };
 		FE8B840D1FA52D5500839EAD /* ARKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ARKit.framework; path = System/Library/Frameworks/ARKit.framework; sourceTree = SDKROOT; };
 		FE8B840F1FA52E0500839EAD /* Assets.scnassets */ = {isa = PBXFileReference; lastKnownFileType = wrapper.scnassets; path = Assets.scnassets; sourceTree = "<group>"; };
 		FEF9D8BC1FA5141300DC236C /* Linguis.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Linguis.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -37,6 +43,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FE1B2FBF1FA5A87800C98ADA /* Vision.framework in Frameworks */,
+				FE1B2FBD1FA5A86700C98ADA /* AVFoundation.framework in Frameworks */,
 				FE8B840E1FA52D5E00839EAD /* ARKit.framework in Frameworks */,
 				6F45B9E9E88ECD36286B9513 /* Pods_Linguis.framework in Frameworks */,
 			);
@@ -57,6 +65,8 @@
 		A43CA907B6FDDB85FFD39C76 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				FE1B2FBE1FA5A87000C98ADA /* Vision.framework */,
+				FE1B2FBC1FA5A86100C98ADA /* AVFoundation.framework */,
 				FE8B840D1FA52D5500839EAD /* ARKit.framework */,
 				934FCD7556AE6A378953B867 /* Pods_Linguis.framework */,
 			);
@@ -131,6 +141,7 @@
 			isa = PBXGroup;
 			children = (
 				FEF9D8C11FA5141300DC236C /* WritingViewController.swift */,
+				FE1B2FBA1FA5A60C00C98ADA /* TrackViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -276,6 +287,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				FEF9D8C21FA5141300DC236C /* WritingViewController.swift in Sources */,
+				FE1B2FBB1FA5A60C00C98ADA /* TrackViewController.swift in Sources */,
 				FEF9D8C01FA5141300DC236C /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

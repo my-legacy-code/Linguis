@@ -67,59 +67,34 @@
                                     </barButtonItem>
                                 </items>
                             </toolbar>
-                            <arscnView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" sceneName="CameraSetup.scn" translatesAutoresizingMaskIntoConstraints="NO" id="dcR-fb-fh7">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lMo-3F-ZnW">
                                 <rect key="frame" x="0.0" y="64" width="375" height="554"/>
-                            </arscnView>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="center" adjustsFontSizeToFit="NO" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="9sO-jU-yps">
                                 <rect key="frame" x="165" y="214" width="45" height="239"/>
                                 <color key="textColor" red="1" green="1" blue="1" alpha="0.40000000000000002" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="200"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <visualEffectView hidden="YES" opaque="NO" contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="gHM-SR-J7f">
-                                <rect key="frame" x="16" y="558" width="343" height="40"/>
-                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" ambiguous="YES" insetsLayoutMarginsFromSafeArea="NO" id="TFu-An-Xbe">
-                                    <rect key="frame" x="0.0" y="0.0" width="343" height="40"/>
-                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                                    <subviews>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Initialize AR Session" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AVK-gP-jv4">
-                                            <rect key="frame" x="95.5" y="9.5" width="152" height="21"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                            <nil key="textColor"/>
-                                            <nil key="highlightedColor"/>
-                                        </label>
-                                    </subviews>
-                                    <constraints>
-                                        <constraint firstItem="AVK-gP-jv4" firstAttribute="centerY" secondItem="TFu-An-Xbe" secondAttribute="centerY" id="79M-UJ-HjE"/>
-                                        <constraint firstItem="AVK-gP-jv4" firstAttribute="centerX" secondItem="TFu-An-Xbe" secondAttribute="centerX" id="yFy-3V-G8l"/>
-                                    </constraints>
-                                </view>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="40" id="Vqy-hR-5fw"/>
-                                </constraints>
-                                <blurEffect style="light"/>
-                            </visualEffectView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="dcR-fb-fh7" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="4hC-6X-z57"/>
                             <constraint firstItem="xuv-lr-9jc" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="7l8-do-ptx"/>
-                            <constraint firstItem="dcR-fb-fh7" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="AXM-kt-nfw"/>
                             <constraint firstItem="9sO-jU-yps" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="CVj-CL-vVj"/>
-                            <constraint firstItem="dcR-fb-fh7" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="TfO-0g-czc"/>
+                            <constraint firstItem="lMo-3F-ZnW" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="H9D-HA-Jm7"/>
+                            <constraint firstItem="lMo-3F-ZnW" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="Jkz-1q-Mc2"/>
+                            <constraint firstItem="lMo-3F-ZnW" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="L8C-GT-QbC"/>
                             <constraint firstItem="xuv-lr-9jc" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="Wyt-Zb-DXW"/>
                             <constraint firstItem="xuv-lr-9jc" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="XxP-Aa-VxY"/>
-                            <constraint firstItem="gHM-SR-J7f" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="fhp-9V-rxl"/>
-                            <constraint firstItem="dcR-fb-fh7" firstAttribute="top" secondItem="xuv-lr-9jc" secondAttribute="bottom" id="ftS-wy-rJS"/>
+                            <constraint firstItem="lMo-3F-ZnW" firstAttribute="top" secondItem="xuv-lr-9jc" secondAttribute="bottom" id="fCe-df-fNR"/>
                             <constraint firstItem="9sO-jU-yps" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="rhj-bQ-qIt"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Writing" image="writing" selectedImage="writing-filled" id="J3Y-3t-AeI"/>
                     <connections>
-                        <outlet property="sceneView" destination="dcR-fb-fh7" id="3TC-WL-KEb"/>
-                        <outlet property="sessionInfoLabel" destination="AVK-gP-jv4" id="vZ3-MD-huO"/>
-                        <outlet property="sessionInfoView" destination="gHM-SR-J7f" id="E9W-Hd-sNE"/>
+                        <outlet property="cameraView" destination="lMo-3F-ZnW" id="gWC-5I-hFY"/>
                         <outlet property="wordLabel" destination="9sO-jU-yps" id="Zg8-ng-iNk"/>
                     </connections>
                 </viewController>
@@ -146,18 +121,39 @@
         <!--Track-->
         <scene sceneID="gTd-Q4-lXX">
             <objects>
-                <viewController id="5d7-T7-VUS" sceneMemberID="viewController">
+                <viewController id="5d7-T7-VUS" customClass="TrackViewController" customModule="Linguis" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="ndN-bg-nlC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="TbU-Kg-WbT">
+                                <rect key="frame" x="0.0" y="20" width="375" height="598"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="cD2-Jf-lCp">
+                                <rect key="frame" x="147" y="287" width="81" height="92"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="TbU-Kg-WbT" firstAttribute="trailing" secondItem="Knr-B4-UGm" secondAttribute="trailing" id="6ZM-KQ-4gb"/>
+                            <constraint firstItem="TbU-Kg-WbT" firstAttribute="leading" secondItem="Knr-B4-UGm" secondAttribute="leading" id="P4y-yz-kKU"/>
+                            <constraint firstItem="TbU-Kg-WbT" firstAttribute="top" secondItem="Knr-B4-UGm" secondAttribute="top" id="UzY-1V-TU8"/>
+                            <constraint firstItem="TbU-Kg-WbT" firstAttribute="bottom" secondItem="Knr-B4-UGm" secondAttribute="bottom" id="ml9-Zg-Z3n"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="Knr-B4-UGm"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Track" image="scan" selectedImage="scan-filled" id="YjJ-KT-leO"/>
+                    <connections>
+                        <outlet property="cameraView" destination="TbU-Kg-WbT" id="fy0-Y4-bBi"/>
+                        <outlet property="highlightView" destination="cD2-Jf-lCp" id="krj-00-8XT"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="aPl-3b-Bu3" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-836" y="1398"/>
+            <point key="canvasLocation" x="-836" y="1396.5517241379312"/>
         </scene>
     </scenes>
     <resources>
