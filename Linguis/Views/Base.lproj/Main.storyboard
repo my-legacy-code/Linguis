@@ -17,8 +17,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <arscnView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" sceneName="CameraSetup.scn" translatesAutoresizingMaskIntoConstraints="NO" id="dcR-fb-fh7">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                            <arscnView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" sceneName="CameraSetup.scn" translatesAutoresizingMaskIntoConstraints="NO" id="dcR-fb-fh7">
+                                <rect key="frame" x="16" y="13" width="375" height="667"/>
                             </arscnView>
                             <visualEffectView hidden="YES" opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gHM-SR-J7f">
                                 <rect key="frame" x="16" y="607" width="343" height="40"/>
@@ -43,12 +43,30 @@
                                 </constraints>
                                 <blurEffect style="light"/>
                             </visualEffectView>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="人" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="9sO-jU-yps">
-                                <rect key="frame" x="84.5" y="214" width="205" height="239"/>
-                                <color key="textColor" red="1" green="1" blue="1" alpha="0.40000000000000002" colorSpace="calibratedRGB"/>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="200"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="我们  us" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ese-fI-6Wp">
+                                <rect key="frame" x="100" y="268" width="63" height="69"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                <color key="textColor" red="0.9303941205663715" green="1" blue="0.984112392903147" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                                <color key="shadowColor" red="0.12943049654764741" green="0.1328125" blue="0.13085195208470052" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="给   Give" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KSo-It-Bjj">
+                                <rect key="frame" x="250" y="268" width="71" height="69"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                <color key="textColor" red="0.92728588444220572" green="0.98836650746982435" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                                <color key="shadowColor" red="0.13067119642928815" green="0.12991711360767796" blue="0.1328125" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="钱 money" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OBY-c8-Xyz">
+                                <rect key="frame" x="171" y="259" width="65" height="87"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                <color key="textColor" red="0.88650798308279977" green="1" blue="0.99222208752283003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                                <color key="shadowColor" red="0.11773934150318434" green="0.1328125" blue="0.13177949599912586" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
@@ -58,9 +76,7 @@
                             <constraint firstItem="dcR-fb-fh7" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="Fkg-4W-PEP"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="gHM-SR-J7f" secondAttribute="trailing" constant="16" id="KiD-l6-d4f"/>
                             <constraint firstItem="gHM-SR-J7f" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="fhp-9V-rxl"/>
-                            <constraint firstItem="9sO-jU-yps" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="hOs-23-gsQ"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="gHM-SR-J7f" secondAttribute="bottom" constant="20" id="mcw-WC-cbt"/>
-                            <constraint firstItem="9sO-jU-yps" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="uD5-aa-rtR"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
@@ -68,6 +84,9 @@
                         <outlet property="sceneView" destination="dcR-fb-fh7" id="3TC-WL-KEb"/>
                         <outlet property="sessionInfoLabel" destination="AVK-gP-jv4" id="vZ3-MD-huO"/>
                         <outlet property="sessionInfoView" destination="gHM-SR-J7f" id="E9W-Hd-sNE"/>
+                        <outlet property="textLabel1" destination="KSo-It-Bjj" id="SNc-GG-ZeT"/>
+                        <outlet property="textLabel2" destination="Ese-fI-6Wp" id="5r3-ca-c2a"/>
+                        <outlet property="textLabel3" destination="OBY-c8-Xyz" id="dQF-AJ-7gS"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

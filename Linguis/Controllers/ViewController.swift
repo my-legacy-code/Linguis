@@ -15,6 +15,11 @@ class ViewController: UIViewController, ARSessionDelegate {
     @IBOutlet weak var sessionInfoLabel: UILabel!
     @IBOutlet weak var sessionInfoView: UIVisualEffectView!
     @IBOutlet weak var sceneView: ARSCNView!
+    @IBOutlet weak var wordText: UITextField!
+    @IBOutlet weak var textLabel1: UILabel!
+    @IBOutlet weak var textLabel2: UILabel!
+    @IBOutlet weak var textLabel3: UILabel!
+    var locLabel = -1
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -28,6 +33,17 @@ class ViewController: UIViewController, ARSessionDelegate {
         sceneView.session.run(configuration)
         
         UIApplication.shared.isIdleTimerDisabled = true
+        
+        let gesture = UIPanGestureRecognizer(target: self, action: #selector(userDragged))
+        
+        textLabel1.addGestureRecognizer(gesture)
+        textLabel1.isUserInteractionEnabled = true
+        let gesture2 = UIPanGestureRecognizer(target: self, action: #selector(userDragged))
+        textLabel2.addGestureRecognizer(gesture2)
+        textLabel2.isUserInteractionEnabled = true
+        let gesture3 = UIPanGestureRecognizer(target: self, action: #selector(userDragged))
+        textLabel3.addGestureRecognizer(gesture3)
+        textLabel3.isUserInteractionEnabled = true
     }
     
     override func viewWillDisappear(_ animated: Bool) {
@@ -67,6 +83,13 @@ class ViewController: UIViewController, ARSessionDelegate {
         // Dispose of any resources that can be recreated.
     }
 
+    @objc func userDragged(gesture: UIPanGestureRecognizer) {
+        print("Dragging")
+        print(gesture.view)
+        var loc = gesture.location(in: self.view)
+        loc.y = gesture.view!.center.y
+        gesture.view!.center = loc
+    }
 
 }
 
