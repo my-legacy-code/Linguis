@@ -8,9 +8,16 @@
 
 /* Begin PBXBuildFile section */
 		6F45B9E9E88ECD36286B9513 /* Pods_Linguis.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 934FCD7556AE6A378953B867 /* Pods_Linguis.framework */; };
-		FE1B2FBB1FA5A60C00C98ADA /* TrackViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE1B2FBA1FA5A60C00C98ADA /* TrackViewController.swift */; };
+		FE1B2FBB1FA5A60C00C98ADA /* ScanViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE1B2FBA1FA5A60C00C98ADA /* ScanViewController.swift */; };
 		FE1B2FBD1FA5A86700C98ADA /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FE1B2FBC1FA5A86100C98ADA /* AVFoundation.framework */; };
 		FE1B2FBF1FA5A87800C98ADA /* Vision.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FE1B2FBE1FA5A87000C98ADA /* Vision.framework */; };
+		FE1B2FC21FA5BEAB00C98ADA /* BoundingBox.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE1B2FC11FA5BEAA00C98ADA /* BoundingBox.swift */; };
+		FE1B2FC41FA5BEC100C98ADA /* CVPixelBufferHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE1B2FC31FA5BEC100C98ADA /* CVPixelBufferHelpers.swift */; };
+		FE1B2FC61FA5BEEA00C98ADA /* Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE1B2FC51FA5BEE900C98ADA /* Helpers.swift */; };
+		FE1B2FC81FA5BF1200C98ADA /* YOLO.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE1B2FC71FA5BF1200C98ADA /* YOLO.swift */; };
+		FE1B2FCA1FA5BFF300C98ADA /* VideoCapture.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE1B2FC91FA5BFF300C98ADA /* VideoCapture.swift */; };
+		FE1B2FCD1FA5C04F00C98ADA /* TinyYOLO.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = FE1B2FCC1FA5C04F00C98ADA /* TinyYOLO.mlmodel */; };
+		FE1B2FCF1FA5C15400C98ADA /* UIImageCVPixelBuffer.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE1B2FCE1FA5C15400C98ADA /* UIImageCVPixelBuffer.swift */; };
 		FE8B840E1FA52D5E00839EAD /* ARKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FE8B840D1FA52D5500839EAD /* ARKit.framework */; };
 		FE8B84101FA52E0500839EAD /* Assets.scnassets in Resources */ = {isa = PBXBuildFile; fileRef = FE8B840F1FA52E0500839EAD /* Assets.scnassets */; };
 		FEF9D8C01FA5141300DC236C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEF9D8BF1FA5141300DC236C /* AppDelegate.swift */; };
@@ -24,9 +31,16 @@
 		24FFA998118A872CC60E55E5 /* Pods-Linguis.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Linguis.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Linguis/Pods-Linguis.debug.xcconfig"; sourceTree = "<group>"; };
 		934FCD7556AE6A378953B867 /* Pods_Linguis.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Linguis.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		CDD9A980083B596E57496D8D /* Pods-Linguis.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Linguis.release.xcconfig"; path = "Pods/Target Support Files/Pods-Linguis/Pods-Linguis.release.xcconfig"; sourceTree = "<group>"; };
-		FE1B2FBA1FA5A60C00C98ADA /* TrackViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrackViewController.swift; sourceTree = "<group>"; };
+		FE1B2FBA1FA5A60C00C98ADA /* ScanViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScanViewController.swift; sourceTree = "<group>"; };
 		FE1B2FBC1FA5A86100C98ADA /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 		FE1B2FBE1FA5A87000C98ADA /* Vision.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Vision.framework; path = System/Library/Frameworks/Vision.framework; sourceTree = SDKROOT; };
+		FE1B2FC11FA5BEAA00C98ADA /* BoundingBox.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BoundingBox.swift; sourceTree = "<group>"; };
+		FE1B2FC31FA5BEC100C98ADA /* CVPixelBufferHelpers.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CVPixelBufferHelpers.swift; sourceTree = "<group>"; };
+		FE1B2FC51FA5BEE900C98ADA /* Helpers.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Helpers.swift; sourceTree = "<group>"; };
+		FE1B2FC71FA5BF1200C98ADA /* YOLO.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YOLO.swift; sourceTree = "<group>"; };
+		FE1B2FC91FA5BFF300C98ADA /* VideoCapture.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VideoCapture.swift; sourceTree = "<group>"; };
+		FE1B2FCC1FA5C04F00C98ADA /* TinyYOLO.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = TinyYOLO.mlmodel; sourceTree = "<group>"; };
+		FE1B2FCE1FA5C15400C98ADA /* UIImageCVPixelBuffer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIImageCVPixelBuffer.swift; sourceTree = "<group>"; };
 		FE8B840D1FA52D5500839EAD /* ARKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ARKit.framework; path = System/Library/Frameworks/ARKit.framework; sourceTree = SDKROOT; };
 		FE8B840F1FA52E0500839EAD /* Assets.scnassets */ = {isa = PBXFileReference; lastKnownFileType = wrapper.scnassets; path = Assets.scnassets; sourceTree = "<group>"; };
 		FEF9D8BC1FA5141300DC236C /* Linguis.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Linguis.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -73,6 +87,14 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		FE1B2FCB1FA5C03600C98ADA /* mlmodels */ = {
+			isa = PBXGroup;
+			children = (
+				FE1B2FCC1FA5C04F00C98ADA /* TinyYOLO.mlmodel */,
+			);
+			path = mlmodels;
+			sourceTree = "<group>";
+		};
 		FEF9D8B31FA5141300DC236C = {
 			isa = PBXGroup;
 			children = (
@@ -117,6 +139,7 @@
 		FEF9D8D21FA5143200DC236C /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				FE1B2FC11FA5BEAA00C98ADA /* BoundingBox.swift */,
 				FEF9D8C31FA5141300DC236C /* Main.storyboard */,
 				FEF9D8C81FA5141300DC236C /* LaunchScreen.storyboard */,
 			);
@@ -133,6 +156,8 @@
 		FEF9D8D41FA5144400DC236C /* Services */ = {
 			isa = PBXGroup;
 			children = (
+				FE1B2FC91FA5BFF300C98ADA /* VideoCapture.swift */,
+				FE1B2FC71FA5BF1200C98ADA /* YOLO.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -141,7 +166,7 @@
 			isa = PBXGroup;
 			children = (
 				FEF9D8C11FA5141300DC236C /* WritingViewController.swift */,
-				FE1B2FBA1FA5A60C00C98ADA /* TrackViewController.swift */,
+				FE1B2FBA1FA5A60C00C98ADA /* ScanViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -149,6 +174,7 @@
 		FEF9D8D61FA514B600DC236C /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				FE1B2FCB1FA5C03600C98ADA /* mlmodels */,
 				FE8B840F1FA52E0500839EAD /* Assets.scnassets */,
 				FEF9D8C61FA5141300DC236C /* Assets.xcassets */,
 			);
@@ -158,6 +184,9 @@
 		FEF9D8D81FA514E600DC236C /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
+				FE1B2FCE1FA5C15400C98ADA /* UIImageCVPixelBuffer.swift */,
+				FE1B2FC51FA5BEE900C98ADA /* Helpers.swift */,
+				FE1B2FC31FA5BEC100C98ADA /* CVPixelBufferHelpers.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -286,9 +315,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FE1B2FCA1FA5BFF300C98ADA /* VideoCapture.swift in Sources */,
 				FEF9D8C21FA5141300DC236C /* WritingViewController.swift in Sources */,
-				FE1B2FBB1FA5A60C00C98ADA /* TrackViewController.swift in Sources */,
+				FE1B2FC61FA5BEEA00C98ADA /* Helpers.swift in Sources */,
+				FE1B2FC41FA5BEC100C98ADA /* CVPixelBufferHelpers.swift in Sources */,
+				FE1B2FBB1FA5A60C00C98ADA /* ScanViewController.swift in Sources */,
 				FEF9D8C01FA5141300DC236C /* AppDelegate.swift in Sources */,
+				FE1B2FCD1FA5C04F00C98ADA /* TinyYOLO.mlmodel in Sources */,
+				FE1B2FCF1FA5C15400C98ADA /* UIImageCVPixelBuffer.swift in Sources */,
+				FE1B2FC81FA5BF1200C98ADA /* YOLO.swift in Sources */,
+				FE1B2FC21FA5BEAB00C98ADA /* BoundingBox.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

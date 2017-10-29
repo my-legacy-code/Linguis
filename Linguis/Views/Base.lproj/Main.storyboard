@@ -118,37 +118,45 @@
             </objects>
             <point key="canvasLocation" x="-834" y="722"/>
         </scene>
-        <!--Track-->
+        <!--Scan-->
         <scene sceneID="gTd-Q4-lXX">
             <objects>
-                <viewController id="5d7-T7-VUS" customClass="TrackViewController" customModule="Linguis" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="5d7-T7-VUS" customClass="ScanViewController" customModule="Linguis" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="ndN-bg-nlC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="TbU-Kg-WbT">
-                                <rect key="frame" x="0.0" y="20" width="375" height="598"/>
+                                <rect key="frame" x="0.0" y="64" width="375" height="554"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             </view>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="cD2-Jf-lCp">
-                                <rect key="frame" x="147" y="287" width="81" height="92"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                            </view>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Fg7-rv-8ee">
+                                <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="YzW-ol-7Fr"/>
+                                </constraints>
+                                <items>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="4Bk-CA-QdA"/>
+                                    <barButtonItem title="Don't remember?" id="cxq-e8-b9j"/>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="Z6F-tL-upV"/>
+                                </items>
+                            </toolbar>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="TbU-Kg-WbT" firstAttribute="trailing" secondItem="Knr-B4-UGm" secondAttribute="trailing" id="6ZM-KQ-4gb"/>
-                            <constraint firstItem="TbU-Kg-WbT" firstAttribute="leading" secondItem="Knr-B4-UGm" secondAttribute="leading" id="P4y-yz-kKU"/>
-                            <constraint firstItem="TbU-Kg-WbT" firstAttribute="top" secondItem="Knr-B4-UGm" secondAttribute="top" id="UzY-1V-TU8"/>
-                            <constraint firstItem="TbU-Kg-WbT" firstAttribute="bottom" secondItem="Knr-B4-UGm" secondAttribute="bottom" id="ml9-Zg-Z3n"/>
+                            <constraint firstItem="Fg7-rv-8ee" firstAttribute="leading" secondItem="Knr-B4-UGm" secondAttribute="leading" id="BTG-Qe-JEW"/>
+                            <constraint firstItem="TbU-Kg-WbT" firstAttribute="bottom" secondItem="Knr-B4-UGm" secondAttribute="bottom" id="BXh-uC-2Yj"/>
+                            <constraint firstItem="TbU-Kg-WbT" firstAttribute="leading" secondItem="Knr-B4-UGm" secondAttribute="leading" id="GGO-Gx-eIF"/>
+                            <constraint firstItem="TbU-Kg-WbT" firstAttribute="trailing" secondItem="Knr-B4-UGm" secondAttribute="trailing" id="Vil-wV-uv3"/>
+                            <constraint firstItem="Fg7-rv-8ee" firstAttribute="trailing" secondItem="Knr-B4-UGm" secondAttribute="trailing" id="cqw-7W-rxi"/>
+                            <constraint firstItem="Fg7-rv-8ee" firstAttribute="top" secondItem="Knr-B4-UGm" secondAttribute="top" id="eqA-F9-Wep"/>
+                            <constraint firstItem="TbU-Kg-WbT" firstAttribute="top" secondItem="Fg7-rv-8ee" secondAttribute="bottom" id="xEX-dq-1p2"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="Knr-B4-UGm"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Track" image="scan" selectedImage="scan-filled" id="YjJ-KT-leO"/>
+                    <tabBarItem key="tabBarItem" title="Scan" image="scan" selectedImage="scan-filled" id="YjJ-KT-leO"/>
                     <connections>
-                        <outlet property="cameraView" destination="TbU-Kg-WbT" id="fy0-Y4-bBi"/>
-                        <outlet property="highlightView" destination="cD2-Jf-lCp" id="krj-00-8XT"/>
+                        <outlet property="videoPreview" destination="TbU-Kg-WbT" id="snp-AF-ukd"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="aPl-3b-Bu3" userLabel="First Responder" sceneMemberID="firstResponder"/>
